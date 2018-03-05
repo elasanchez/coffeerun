@@ -35,7 +35,7 @@
     });
 
     var description = "Thank you for your payment, ";
-    description += paymentInfo.title +  " " + paymentInfo.username;
+    description += paymentInfo.title +  " " + paymentInfo.username + ".";
     description += "Have a great day!";
 
     // piece all the elements into a subtree

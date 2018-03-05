@@ -5,19 +5,9 @@
   <meta charset="utf-8">
   <title>coffeerun</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
-<!-- Modal -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 
 <body class="container">
-
-  <a href="#payment-form.html" id="maunual-ajax">Payment</a>
-
-  <!-- AJAX response must be wrapped in the modal's root class. -->
-    <div class="modal">
-      <p>Second AJAX Example!</p>
-    </div>
-
   <header>
     <h1>CoffeeRun</h1>
   </header>
@@ -29,49 +19,49 @@
             <label for="coffeeOrder">Coffee Order</label>
             <input class="form-control" name="coffee" id="coffeeOrder" autofocus>
           </div>
-            <div class="form-group">
-              <label for="emailInput">Email</label>
-              <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="dr@who.com">
-            </div>
+          <div class="form-group">
+            <label for="emailInput">Email</label>
+            <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="dr@who.com">
+          </div>
 
-            <div class="radio">
-              <label>
+          <div class="radio">
+            <label>
                 <input type="radio" name="size" value="short">
                 Short
               </label>
-            </div>
+          </div>
 
-            <div class="radio">
-              <label>
+          <div class="radio">
+            <label>
                 <input type="radio" name="size" value="tall" checked>
                 Tall
               </label>
-            </div>
-            <div class="radio">
-              <label>
+          </div>
+          <div class="radio">
+            <label>
               <input type="radio" name="size" value="grande">
               Grande
               </label>
-            </div>
+          </div>
 
-            <div class="form-group">
-              <!--  Creating drop down box using div>lable>select -->
-              <label for="flavorShot">Flavor Shot</label>
-              <!-- select element specifies the name -->
-              <select class="form-control" id="flavorShot" name="flavor">
+          <div class="form-group">
+            <!--  Creating drop down box using div>lable>select -->
+            <label for="flavorShot">Flavor Shot</label>
+            <!-- select element specifies the name -->
+            <select class="form-control" id="flavorShot" name="flavor">
               <!-- option elements provide one of the possible values -->
               <option value="">None</option>
               <option value="caramel">Caramel</option>
               <option value="almond">Almond</option>
               <option value="mocha">Mocha</option>
             </select>
-            </div>
-            <div class="form-group">
-              <label for="stregthLevel">Caffeine Rating</label>
-              <input name="strength" id="strengthLevel" type="range" value="30">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-            <button type="reset" class="btn btn-default">Reset</button>
+          </div>
+          <div class="form-group">
+            <label for="stregthLevel">Caffeine Rating</label>
+            <input name="strength" id="strengthLevel" type="range" value="30">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="reset" class="btn btn-default">Reset</button>
         </form>
       </div>
     </div>
@@ -79,7 +69,7 @@
       <div class="panel-body">
         <h4>Pending Orders:</h4>
         <div data-coffee-order="checklist">
-
+          <!-- Checklist will be dynamically created using jQuery-->
         </div>
       </div>
     </div>
@@ -90,13 +80,6 @@
   <script src="scripts/datastore.js" charset="utf-8"></script>
   <script src="scripts/truck.js" charset="utf-8"></script>
   <script src="scripts/main.js" charset="utf-8"></script>
-
-  <!-- modal window -->
-  <!-- Remember to include jQuery :) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-
-  <!-- jQuery Modal -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 </body>
 
 </html>

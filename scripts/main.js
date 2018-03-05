@@ -22,9 +22,7 @@
     checkList.addRow.call(checkList, data);
   });
 
-  
-  // console.log(formHandler);
-
+  // // console.log(formHandler);
   // var PAYMENT_SELECTOR = "[data-payment-order=\"form\"]";
   // var paymentFormHandler = new FormHandler(PAYMENT_SELECTOR);
   // paymentFormHandler.addSubmitHandler(myTruck.createOrder.bind(myTruck));

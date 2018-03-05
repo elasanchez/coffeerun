@@ -1,23 +1,23 @@
-
-(function (window) {
+(function(window) {
   "use strict";
   var App = window.App || {};
   // Using code that is defined somewhere else i.e., jQuery fn
   var $ = window.jQuery;
+
   function FormHandler(selector) {
-    if(!selector) {
+    if (!selector) {
       throw new Error("No selector provided");
     }
     //find a matching element in the DOM using that selector and assign the result to this.$formElement.
     this.$formElement = $(selector);
 
-    if(this.$formElement.length === 0) {
-      throw new Error("Could not find element with selector "+ selector);
+    if (this.$formElement.length === 0) {
+      throw new Error("Could not find element with selector " + selector);
     }
   }
 
   // Add a addSubmitHandler in FormHandler prototype
-  FormHandler.prototype.addSubmitHandler = function (fn) {
+  FormHandler.prototype.addSubmitHandler = function(fn) {
     // custom console
     console.log("Setting submit handler for form");
     this.$formElement.on("submit", function(event) {
@@ -40,17 +40,6 @@
       this.elements[0].focus();
     });
   };
-
-  // // Open modal in AJAX callback
-  // $("#manual-ajax").click(function(event) {
-  //   event.preventDefault();
-  //   this.blur(); // Manually remove focus from clicked link.
-  //   $.get(this.href, function(html) {
-  //     $(html).appendTo("body").modal();
-  //   });
-  // });
-
-
 
   App.FormHandler = FormHandler;
   window.App = App;
