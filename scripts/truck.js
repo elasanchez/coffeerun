@@ -14,7 +14,7 @@
   }
 
   Truck.prototype.createOrder = function(order) {
-    // custom console
+    /*eslint no-console: "error"*/
     console.log("Adding order for " + order.emailAddress);
     this.db.add(order.emailAddress, order);
   };
@@ -35,7 +35,6 @@
       //normally this is not defined inside a callback function.
     }.bind(this));
   };
-
 
   // Adding a function prototype called Truck and assigning the fn Truck we just created
   App.Truck = Truck;
