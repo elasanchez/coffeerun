@@ -1,3 +1,5 @@
+// programmer: Luigi Austria Sanchez
+// Creates DOM elements dynamically to be used for dialog box
 (function(window) {
   //Why do Row and addRow both append to $element??
 

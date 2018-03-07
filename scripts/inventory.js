@@ -1,4 +1,6 @@
-(function(window){
+// programmer: Luigi Austria Sanchez
+// Defines Constructor for a cashier and creates function prototypes to log and print payments
+(function(window) {
 
   var App = window.App || {};
 
