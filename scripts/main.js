@@ -1,4 +1,4 @@
-(function (window) {
+(function(window) {
   "use strict";
   var FORM_SELECTOR = "[data-coffee-order=\"form\"]";
   var CHECKLIST_SELECTOR = "[data-coffee-order=\"checklist\"]";
@@ -14,17 +14,11 @@
   var checkList = new CheckList(CHECKLIST_SELECTOR);
   checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
   // formHandler.addSubmitHandler(myTruck.createOrder.bind(myTruck));
-  formHandler.addSubmitHandler(function (data) {
 
+  formHandler.addSubmitHandler(function(data) {
     //since we are passing data to work with "this" in each function, we can't use the
     //normal bind because this will not be passed correctly.
     myTruck.createOrder.call(myTruck, data);
     checkList.addRow.call(checkList, data);
   });
-
-  // // console.log(formHandler);
-  // var PAYMENT_SELECTOR = "[data-payment-order=\"form\"]";
-  // var paymentFormHandler = new FormHandler(PAYMENT_SELECTOR);
-  // paymentFormHandler.addSubmitHandler(myTruck.createOrder.bind(myTruck));
-
 })(window);
