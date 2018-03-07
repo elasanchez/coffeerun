@@ -1,4 +1,4 @@
-(function (window) {
+(function(window) {
   "use strict";
   var App = window.App;
   var $ = window.jQuery;
@@ -6,12 +6,14 @@
   var DataStore = App.DataStore;
   var FormHandler = App.FormHandler;
   var Payment = App.Payment;
+  var Cashier = App.Cashier;
   var PAYMENT_SELECTOR = "[data-payment-order=\"form\"]";
   var WINDOW_SELECTOR = "[data-payment-order=\"greetings\"]";
 
   var dialogBox = new Payment(WINDOW_SELECTOR);
-  var myTruck = new Truck("ncc-1701", new DataStore());
-  window.myTruck = myTruck;
+  // var myTruck = new Truck("ncc-1701", new DataStore());
+  var myCashier = new Cashier("Elise-9017", new DataStore());
+  window.myCashier = myCashier;
 
   // var formHandler = new FormHandler(FORM_SELECTOR);
   // var checkList = new CheckList(CHECKLIST_SELECTOR);
@@ -31,7 +33,8 @@
 
   var paymentFormHandler = new FormHandler(PAYMENT_SELECTOR);
   paymentFormHandler.addSubmitHandler(function(data) {
-    myTruck.createOrder.call(myTruck, data);
+    // myTruck.createOrder.call(myTruck, data);
+    myCashier.logPayment.call(myCashier, data);
     dialogBox.generatemsg.call(dialogBox, data);
     //calls jquery modal function on id = "greet" DOM element
     $("#greet").modal();

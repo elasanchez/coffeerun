@@ -25,17 +25,17 @@
   function Greeting(paymentInfo) {
     // Creating elements for the DOM subtree
     var $div = $("<div></div>", {
-      id:"greet",
-      class:"modal"
+      id: "greet",
+      class: "modal"
     });
     var $p = $("<p></p>");
     var $a = $("<a></a>", {
-      href:"#",
-      rel:"modal:close"
+      href: "#",
+      rel: "modal:close"
     });
 
     var description = "Thank you for your payment, ";
-    description += paymentInfo.title +  " " + paymentInfo.username + ".";
+    description += paymentInfo.title + " " + paymentInfo.username + ". <br>";
     description += "Have a great day!";
 
     // piece all the elements into a subtree
