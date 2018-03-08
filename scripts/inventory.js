@@ -1,5 +1,6 @@
 // programmer: Luigi Austria Sanchez
 // Defines Constructor for a cashier and creates function prototypes to log and print payments
+/*eslint-disable no-console*/
 (function(window) {
 
   var App = window.App || {};
@@ -12,7 +13,7 @@
   Cashier.prototype.logPayment = function(payment) {
     console.log("logging payment for" + payment.usermail);
     this.db.add(payment.usermail, payment);
-  }
+  };
 
   Cashier.prototype.printPayments = function() {
     var customerPaymentsArray = Object.keys(this.db.getAll());
@@ -22,7 +23,7 @@
       console.log(this.db.get(id));
     }.bind(this));
     console.log(" payments.");
-  }
+  };
   App.Cashier = Cashier;
   window.App = App;
 })(window);

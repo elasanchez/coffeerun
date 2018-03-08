@@ -1,4 +1,4 @@
-/*eslint no-console: "error"*/
+/*eslint-disable no-console*/
 
 (function(window) {
   "use strict";

@@ -1,3 +1,4 @@
+/*eslint-disable no-console*/
 (function(window) {
   "use strict";
   var App = window.App || {};

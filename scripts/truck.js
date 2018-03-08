@@ -1,4 +1,4 @@
-/*eslint no-console: "error"*/
+/*eslint-disable no-console*/
 
 (function(window) {
   "use strict";
@@ -14,7 +14,7 @@
   }
 
   Truck.prototype.createOrder = function(order) {
-    /*eslint no-console: "error"*/
+    
     console.log("Adding order for " + order.emailAddress);
     this.db.add(order.emailAddress, order);
   };
